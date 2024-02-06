@@ -2,29 +2,27 @@
 @using SuperheroSocialClub.Models
 @using SuperheroSocialClub.Repo
 @model SuperheroSocialClub.Pages.SuperHeroes.DisplaySuperHeroModel
-@{
-}
 
 
 <div id="hero-container">
 
-    @foreach(SuperHero superheros in SuperHeroManager.SuperHeroes)
+    @foreach(SuperHero superhero in SuperHeroManager.SuperHeroes)
     {
         <div class="super-hero">
 
-             <h1>Superhero name: @superheros.Name</h1>
-             <br />
-            <h4>Secret Identity: @superheros.SecretIdentity </h4>
+            <h1>Superhero name: @superhero.Name</h1>
             <br />
-            <h4>Secret power: @superheros.SuperPower</h4>
-            <br /> 
-          
+            <h4>Secret Identity: @superhero.SecretIdentity </h4>
+            <br />
+            <h4>Secret power: @superhero.SuperPower</h4>
+            <br />
+
+            <form asp-page-handler="delete" asp-route-id="@superhero.Id" method="post">
+                <button class="btn btn-default">Delete</button>
+            </form>
         </div>
 
-       
     }
 
-
-
-
 </div>
+
