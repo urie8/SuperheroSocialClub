@@ -9,7 +9,7 @@ namespace SuperheroSocialClub.Repo
 
 		};
 
-		static void AddSuperHero(int id, string name, string secretIdentity, string superPower)
+		public static void AddSuperHero(int id, string name, string secretIdentity, string superPower)
 		{
 			SuperHero newSuperHero = new()
 			{
@@ -22,13 +22,13 @@ namespace SuperheroSocialClub.Repo
 			SuperHeroes.Add(newSuperHero);
 		}
 
-		static void UpdateSuperHero(int id)
+		public static void UpdateSuperHero(int id)
 		{
 			SuperHero SupeHeroToUpdate = SuperHeroes.FirstOrDefault(s => s.Id == id);
 
 		}
 
-		static void DeleteSuperHero(int id)
+		public static void DeleteSuperHero(int id)
 		{
 			SuperHero SuperHeroToDelete = SuperHeroes.FirstOrDefault(s => s.Id == id);
 			SuperHeroes.Remove(SuperHeroToDelete);
