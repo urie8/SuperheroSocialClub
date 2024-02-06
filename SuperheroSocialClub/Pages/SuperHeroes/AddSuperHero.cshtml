@@ -1,0 +1,17 @@
+﻿@page
+@model SuperheroSocialClub.Pages.SuperHeroes.AddSuperHeroModel
+@{
+	ViewData["Title"] = "Add Superhero";
+}
+
+	<h1>Add Superhero</h1>
+
+	<form method="post">
+
+	    <input type="number" asp-for="SuperHero.Id" placeholder="ID" />
+    	<input type="text" asp-for="SuperHero.Name" placeholder="Name" />
+	    <input type="text" asp-for="SuperHero.SecretIdentity" placeholder="Secret Identity" />
+	    <input type="text" asp-for="SuperHero.SuperPower" placeholder="Superpower" />
+		<button type="submit">Submit</button>
+
+	</form>
