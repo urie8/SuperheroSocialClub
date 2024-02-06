@@ -10,7 +10,7 @@
 
 <form method="post">
 
-	<input type="number" asp-for="SuperHero.Id" value="@Model.SuperHero.Id" placeholder="ID" />
+	<input type="number" asp-for="SuperHero.Id" value="@Model.SuperHero.Id" placeholder="ID" hidden="hidden"/>
 	<input type="text" asp-for="SuperHero.Name" value="@Model.SuperHero.Name" placeholder="Name" />
 	<input type="text" asp-for="SuperHero.SecretIdentity" value="@Model.SuperHero.SecretIdentity" placeholder="Secret Identity" />
 	<input type="text" asp-for="SuperHero.SuperPower" value="@Model.SuperHero.SuperPower" placeholder="Superpower" />
