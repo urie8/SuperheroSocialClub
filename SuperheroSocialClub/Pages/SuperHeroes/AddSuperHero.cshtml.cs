@@ -5,25 +5,25 @@ using SuperheroSocialClub.Repo;
 
 namespace SuperheroSocialClub.Pages.SuperHeroes
 {
-	public class AddSuperHeroModel : PageModel
-	{
-		[BindProperty]
-		public SuperHero SuperHero { get; set; }
-		public void OnGet()
-		{
+    public class AddSuperHeroModel : PageModel
+    {
+        [BindProperty]
+        public SuperHero SuperHero { get; set; }
+        public void OnGet()
+        {
 
-		}
+        }
 
-		public IActionResult OnPost()
-		{
-			if (ModelState.IsValid == false)
-			{
-				return Page();
-			}
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid == false)
+            {
+                return Page();
+            }
 
-			SuperHeroManager.AddSuperHero(SuperHero);
-			return RedirectToPage("/Index");
+            SuperHeroManager.AddSuperHero(SuperHero);
+            return RedirectToPage("/Index", new { SuperHero.Name, SuperHero.SecretIdentity });
 
-		}
-	}
+        }
+    }
 }
