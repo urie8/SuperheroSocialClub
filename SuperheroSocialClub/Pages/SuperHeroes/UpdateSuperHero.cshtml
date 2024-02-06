@@ -1,0 +1,19 @@
+﻿@page
+@using SuperheroSocialClub.Repo
+@using SuperheroSocialClub.Models
+
+@model SuperheroSocialClub.Pages.SuperHeroes.UpdateSuperHeroModel
+@{
+}
+
+<h1>Update Superhero</h1>
+
+<form method="post">
+
+	<input type="number" asp-for="SuperHero.Id" value="@Model.SuperHero.Id" placeholder="ID" />
+	<input type="text" asp-for="SuperHero.Name" value="@Model.SuperHero.Name" placeholder="Name" />
+	<input type="text" asp-for="SuperHero.SecretIdentity" value="@Model.SuperHero.SecretIdentity" placeholder="Secret Identity" />
+	<input type="text" asp-for="SuperHero.SuperPower" value="@Model.SuperHero.SuperPower" placeholder="Superpower" />
+	<button type="submit">Submit</button>
+
+</form>

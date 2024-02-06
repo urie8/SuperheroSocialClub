@@ -18,8 +18,11 @@
             <br />
 
             <form asp-page-handler="delete" asp-route-id="@superhero.Id" method="post">
-                <button class="btn btn-default">Delete</button>
+                <button class="btn btn-primary">Delete</button>
             </form>
+
+            <a asp-page=/SuperHeroes/UpdateSuperHero asp-route-id="@superhero.Id">Update</a>
+
         </div>
 
     }
