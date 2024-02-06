@@ -7,6 +7,7 @@ namespace SuperheroSocialClub.Pages.SuperHeroes
 {
     public class UpdateSuperHeroModel : PageModel
     {
+        [BindProperty]
         public SuperHero SuperHero { get; set; }
 
         public void OnGet(int id)
@@ -14,12 +15,13 @@ namespace SuperheroSocialClub.Pages.SuperHeroes
             SuperHero = SuperHeroManager.SuperHeroes.FirstOrDefault(s => s.Id == id);
         }
 
-        public IActionResult OnPostUpdate()
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid == false)
             {
                 return Page();
             }
+
 
             SuperHeroManager.UpdateSuperHero(SuperHero);
             return RedirectToPage("/Index", new { SuperHero.Name, SuperHero.SecretIdentity });

@@ -28,10 +28,10 @@ namespace SuperheroSocialClub.Repo
             SuperHeroes.Add(newSuperHero);
         }
 
-        public static void UpdateSuperHero(SuperHero updatedSuperHero)
+        public static void UpdateSuperHero(SuperHero superHeroToUpdate)
         {
-            SuperHeroes.Remove(SuperHeroes.FirstOrDefault(s => s.Id == updatedSuperHero.Id));
-            SuperHeroes.Add(updatedSuperHero);
+            SuperHeroes.Remove(SuperHeroes.FirstOrDefault(s => s.Id == superHeroToUpdate.Id));
+            SuperHeroes.Add(superHeroToUpdate);
 
         }
 
