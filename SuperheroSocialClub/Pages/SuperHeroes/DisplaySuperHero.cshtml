@@ -1,0 +1,30 @@
+﻿@page
+@using SuperheroSocialClub.Models
+@using SuperheroSocialClub.Repo
+@model SuperheroSocialClub.Pages.SuperHeroes.DisplaySuperHeroModel
+@{
+}
+
+
+<div id="hero-container">
+
+    @foreach(SuperHero superheros in SuperHeroManager.SuperHeroes)
+    {
+        <div class="super-hero">
+
+             <h1>Superhero name: @superheros.Name</h1>
+             <br />
+            <h4>Secret Identity: @superheros.SecretIdentity </h4>
+            <br />
+            <h4>Secret power: @superheros.SuperPower</h4>
+            <br /> 
+          
+        </div>
+
+       
+    }
+
+
+
+
+</div>
