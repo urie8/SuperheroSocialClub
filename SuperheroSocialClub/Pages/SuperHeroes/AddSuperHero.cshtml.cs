@@ -9,6 +9,7 @@ namespace SuperheroSocialClub.Pages.SuperHeroes
 	{
 		[BindProperty]
 		public SuperHero SuperHero { get; set; }
+	
 		public void OnGet()
 		{
 
